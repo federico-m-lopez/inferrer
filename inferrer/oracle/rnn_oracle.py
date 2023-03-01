@@ -30,7 +30,7 @@ class RNNOracle(Oracle):
         """
         super().__init__()
         alphabet = "01"
-        target = s_plus + s_minus
+        target = s_plus.union(s_minus)
         self.rnn = RNNClassifier(alphabet, num_layers=1, hidden_dim=10, RNNClass = LSTMNetwork)
         mixed_curriculum_train(self.rnn, target, stop_threshold = 0.0005)
         
