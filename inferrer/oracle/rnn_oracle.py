@@ -4,8 +4,8 @@ from inferrer import automaton
 from typing import Set, Tuple
 from inferrer.oracle.oracle import Oracle
 
-from LSTM import LSTMNetwork
-from GRU import GRUNetwork
+from inferrer.oracle.rnn.LSTM import LSTMNetwork
+from inferrer.oracle.rnn.GRU import GRUNetwork
 from inferrer.oracle.rnn.RNNClassifier import RNNClassifier
 from inferrer.oracle.rnn.Training_Functions import make_train_set_for_target, mixed_curriculum_train
 
